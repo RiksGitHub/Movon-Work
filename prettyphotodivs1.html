@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Untitled 1</title>
+<style>
+div 		{position:relative;display:inline-block;border:1pt black solid; margin:5px;padding:5px;min-height:25px;min-width:50px;}
+p, ul,li	{margin:0;padding:0;}
+div.pp_top .pp_left,
+div.pp_top .pp_right,
+div.pp_bottom .pp_left,
+div.pp_bottom .pp_right {max-width:13px; max-height:13px; margin:0; padding:0; overflow:hidden;}
+</style>
+</head>
+
+<body>
+<p style="margin:10px;">Markup:</p>
+<div class="pp_pic_holder" style="background:black;color:white;width:795px;"><p>.pp_pic_holder</p> 
+	<div class="ppt" style="display:block; background:white;color:black;"><p>&nbsp;.ppt (contains the img title)</p></div> <!-- Bevat de ingevoerde titel -->
+	<div class="pp_top" style="display:block; background:white;color:black;text-align:center;"><p style="text-align:left;">.pp_top (for adding the top border)</p><br /> 
+		<div class="pp_left" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png') -88px -53px no-repeat"><p>.pp_left</p></div> 
+		<div class="pp_middle" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png') top left repeat"><p>.pp_middle</p></div> 
+		<div class="pp_right" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png') -110px -53px no-repeat"><p>.pp_right</p></div> 
+	</div> 
+	<div class="pp_content_container" style="display:block; background:white;color:black;">.pp_content_container<br /> 
+		<div class="pp_left" style="padding:0 0 0 18px; margin:0; background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png') top left repeat-y"><p>.pp_left (for adding the left border, in the left padding)</p> 
+		<div class="pp_right" style="padding:0 14px 0 0; margin:0; background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png') top right repeat-y"><p>.pp_right (for adding the right border, in the right padding)</p> 
+			<div class="pp_content" style="background:#eee; text-align: center;"><p style="text-align:left;">.pp_content</p> 
+				<div class="pp_loaderIcon" style="display:inline-block;width:140px; clear:right; text-align:center;"><p>.pp_loaderIcon <br />Position <i>absolute</i>,<br /> left 50%, top 50%)</p></div> 
+				<div class="pp_fade" style="text-align:left;"><p>.pp_fade</p>
+					<a href="#" class="pp_expand" title="Expand the image" style="display:inline-block;float:right;">.pp_expand</a> 
+					<div class="pp_hoverContainer"><p>.pp_hoverContainer<br />(only for adding the next and previous on top of the img)</p> 
+						<a class="pp_next" href="#">.pp_next</a> 
+						<a class="pp_previous" href="#">.pp_previous</a> 
+					</div> 
+					<div id="pp_full_res"><p>#pp_full_res (contains the img, i think)</p></div> 
+					<div class="pp_details" style="display:block"><p>.pp_details</p> 
+						<div class="pp_nav"><p>.pp_nav</p> 
+							<a href="#" class="pp_arrow_previous">.pp_arrow_previous</a> 
+							<p class="currentTextHolder" style="display:inline-block">'0/0' .currentTextHolder</p> 
+							<a href="#" class="pp_arrow_next">.pp_arrow_next</a> 
+						</div> 
+						<p class="pp_description" style="display:inline-block">.pp_description</p> 
+						{pp_social} 
+						<a class="pp_close" href="#">.pp_close</a> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+		</div> 
+	</div> 
+	<div class="pp_bottom" style="display:block;background:white;color:black;"><p>.pp_bottom (for adding the bottom border)</p> 
+		<div class="pp_left" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png') -88px -80px no-repeat">.pp_left</div> 
+		<div class="pp_middle" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png') top left repeat">.pp_middle</div> 
+		<div class="pp_right" style="background:url('js/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png') -110px -80px no-repeat">.pp_right</div> 
+	</div> 
+</div> 
+<div class="pp_overlay" style="display:block;background:black;color:white;width:795px;"><p>.pp_overlay</p>
+	<p style="margin:10px;">Gallery:</p>
+	<div class="pp_gallery" style="display:block;background:white;color:black;">
+		<a href="#" class="pp_arrow_previous">.pp_arrow_previous</a>
+		<div style="text-align:center;">nameless div<br />
+			<ul>
+				<li style="display:inline-block">... ... ... {gallery} ... ... ...</li>
+			</ul>
+		</div>
+		<a href="#" class="pp_arrow_next">Next</a>
+	</div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+﻿
+/* Reset */
+html 	{font-size:14px;}
+body	{font-size:100%;}
+html, body { margin:0; padding:0; border:0;  background:transparent; width:100%; height:100%; }
+
+div, span, article, aside, footer, header, hgroup, nav, section,
+h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li, 
+table, tr, th, td, tbody, tfoot, thead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+img 	{ margin:0; padding:0; border:0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+	
+input, select, textarea, form, fieldset {
+	margin: 0; padding: 0; border: 0;
+	}
+
+button							{border:1.5pt white outset;}	
+button.hover, button:hover		{background-color:white;}
+button.active, button:active	{border:1.5pt white inset;}/**/
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { 
+	display:block; }
+
+h1, h2, h3, h4, h5, h6, p, li, blockquote, table, td, th, a, caption, em, strong, strike, dl, dt, dd { 
+	font-family:Verdana, Geneva, Tahoma, sans-serif,'TimesNewRomanPSMT', 'Times New Roman', serif;
+	font-size:100%;
+	font-weight: normal;
+	opacity: 1.00;
+	line-height: 100%; 
+	text-indent: 0;
+	text-decoration: none;
+	text-align: left;
+	color: #000;
+	}
+
+/* Global */
+html 	{height: 100%;	}
+body	{height: 100%;
+		background:aliceblue; /* Just in case the below construction is too complicated */
+		background:url('../images/movon_logo_bg.png'),linear-gradient(180deg, #ccd8ee, #F0F8FF, aliceblue);/*, #F0F8FF 75%, #ccd8ee); /* Linear gradient doesn't work well on mobile device*/
+		background-repeat:repeat, no-repeat;/**/
+		background-attachment:fixed, fixed;/**/
+		background-position:top left,top left;/**/
+		background-color:aliceblue;/**/
+		}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {font-weight:normal; font-style: italic;	text-shadow: 1px 1px 0px #FFF;}
+
+h1 					{ font-size:2.7em; margin:15px 0 10px 0; line-height: 1.2em;}
+h2 					{ font-size:1.8em; margin:15px 0 10px 0;				}
+h3					{ font-size:1.5em; margin:10px 0 10px 0; line-height: 1.0em;}
+h4 					{ font-size:1.3em; margin:10px 0 5px 0; text-shadow: 0px 1px 0px #FFF;}
+h5 					{ font-size:1.2em; margin:10px 0 5px 0; text-shadow:none;}
+h6 					{ font-size:1.1em; margin:10px 0 5px 0; text-shadow:none;}
+
+/* Images in Headings*/
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+/* Text Elements */
+
+p           	{ color:#000; line-height:1.1em; padding: 0px; }
+				    
+p .left			{ margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p .right 		{ margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+a           	{ cursor:pointer;  }
+a:link			{ color: #00f; text-decoration:underline; }
+a:visited		{ color: #808;  }
+a:active		{ color: #000;  }
+a:focus			{ color: #666;  }
+a:hover     	{ color: #f00;  }
+
+blockquote  	{ color:#000; font-size:.8em; }
+
+strong      	{ font-weight: bold; }
+em		      	{ font-style: italic; }
+
+/* Images */
+
+/* Lists */
+
+ul          	{ }
+ol          	{ list-style-type:decimal; }
+
+ul li, ol li	{ margin:.5em 20px; color:#000; }
+ul.koppie li 	{list-style:none; background-image:url('../images/AnneliesvdBroek_li.png'); background-repeat:no-repeat;
+			    /*background-color: grey;/**/
+			    margin:5pt 0; padding: 3pt 0 6pt 20pt;
+				}
+				
+ul.spacelist		{margin:20px 0;}
+ul.spacelist li 	{line-height: 1.3em; padding-top: 0;}
+ul.spacelist strong {color: rgb(224, 77, 16); font-weight:normal; font-style:italic;}
+
+dl          	{ margin:0; }
+dt       		{ margin:0; }
+dd          	{ margin:0;	}
+
+/* Tables */
+
+table       	{width:100%; margin-bottom:2em;}
+/*td {border:1px #bbb solid;} /* Turn on to visualize general table td's */
+tr				{ color:#000; padding: 0; 	}
+.odd			{ background-color:#eee; }
+.even			{ background-color:#fff; }
+
+th          	{ font-weight: bold; }
+thead, th    	{ background: #ccc; }
+
+tbody			{   }
+
+th,td,caption 	{text-align:center; vertical-align: middle;	}
+caption 		{ 	}
+
+tfoot       	{	}
+.tfooter		{ background-color:#ccc; text-align:center; font-style:italic; }
+
+caption     	{ background: #efefef; }
+
+table.tabel th		{padding:5px 5px; border-bottom:1px #000 solid}
+table.tabel tr:nth-of-type(odd) {background: #eee;} /* Zebra striping */
+table.tabel td		{padding:2px 5px; border:1px #bbb solid;} /*Tabel die fungeert als echte tabel, krijgt 'class=tabel'*/
+
+table.uitgelijnd	{width:100%;margin:.5em 0; }
+table.uitgelijnd td	{text-align:left; padding:.2em 0; vertical-align:top; border:0px; }
+
+
+/* Containers */
+/* remember, due to some dumb thinking by the W3C team, adding padding will increase box size (and so will border and margin)
+so to have padding, apply it to the elements in the box, not on the box itself (or subtract from box width)
+*/
+
+#wrapper 			{height: 100%; position:relative; margin:0px auto; background-color:rgb(250,235,225); background-color:rgba(250,235,225,.8);
+					overflow:hidden; /* hidden makes the box wrap the content, thus filling it with the background color (careful with menu items)*/
+					width:1200px; /* Controlled by JS /**/
+					box-shadow:0px 3px 7px 0px black;}
+body > #wrapper 	{height: auto; min-height: 100%; } /* This line added because old IE doesn't know the 'min-height' attribute (and would ignore it) */
+
+#header				{clear:both; position:relative; z-index:100;
+					width:100%;} /* Controlled by JS /**/ 
+
+#logobackground		{float:left; position:relative; text-align:center; 
+					width:275px; /* Controlled by JS /**/
+					height:120px; background:url('../images/movon_logo.png'); background-position:center; background-size:contain; background-repeat:repeat-x;} 
+
+#logo				{position:relative; 
+					/*background:url('../images/movon_logo.png'); background-size:contain; background-repeat:no-repeat; /**/
+					}
+#logo img			{height:100px;} /**/
+
+#title	 			{float:left; clear:right; position:relative; height:100%;
+					width:912px; /* Controlled by JS /**/
+					}
+#title img			{display:block;} /* To avoid an image being placed as text like 'c' or 'b' which creates space below it (which is not margin or padding) /**/
+
+/* Main menu settings (#navbar)*/
+
+#contentarea		{float:left; position:relative; overflow:visible; /* Div contains #leftbar and #content, so they can be given a background color. Overflow:visible to show #content shadow and extend the submenu past below the #content */
+					min-height:100%; z-index:2;
+					width:100%; /* Controlled by JS /**/
+					padding-bottom:0px; /*Padding-bottom for height of footer*/
+					} 
+
+#leftbar			{float:left; position:relative; overflow:visible; /*visible, so the submenu's can be seen when expanded*/
+					width:22%; /* Controlled by JS /**/
+					height:100%; min-height:.2em; /*min-height is so it doesn't collapse when it's empty*/
+					} 
+					
+#content 			{float:left; position:relative; bottom:0;
+					padding-bottom:30px; /*padding-top:20px; /* Padding-bottom is for height of footer */
+					width:78%; /* Controlled by JS /**/
+					height:100%; min-height:100%; 
+					background-color:#DEF;
+					-webkit-box-shadow: 0px 3px 7px 0px black; -moz-box-shadow: 0px 3px 7px 0px black; box-shadow: 0px 3px 7px 0px black; 
+					background: -webkit-linear-gradient(right, #def 40%, #F0F8FF); /* For Safari 5.1 to 6.0 */
+    				background: -o-linear-gradient(right, #def 40%, #F0F8FF); /* For Opera 11.1 to 12.0 */
+    				background: -moz-linear-gradient(right, #def 40%, #F0F8FF); /* For Firefox 3.6 to 15 */
+    				background: linear-gradient(to right, #def 40%, #F0F8FF); /* Standard syntax (must be last) */
+					}
+					
+#content .large	li	{list-style:disc; /* Style settings voor lijstje op de home page */
+				    line-height: 2em;
+				    margin:15px;
+				    margin-left:20px;/**/
+				    }
+				    
+#content img		{margin:0px;}
+
+#content #googleMap	{position:relative; z-index:50;}
+
+/* Div's containing photo's are given class 'gallery': */
+.gallery 			{width:95%; padding:.8em 2%; margin:12px auto; overflow:hidden; /* Overflow hidden is so it can contain (and wrap around) floating elements */
+					background-color:#FAEBE1;
+					background: -webkit-linear-gradient(#FAEBE1, #F0F8FF 60%); /* For Safari 5.1 to 6.0 */
+    				background: -o-linear-gradient(#FAEBE1, #F0F8FF 60%); /* For Opera 11.1 to 12.0 */
+    				background: -moz-linear-gradient(#FAEBE1, #F0F8FF 60%); /* For Firefox 3.6 to 15 */
+    				background: linear-gradient(#FAEBE1, #F0F8FF 60%); /* Standard syntax (must be last) */
+					-webkit-box-shadow: -5px 5px 10px 0px #777; -moz-box-shadow: -5px 5px 10px 0px #777; box-shadow: -5px 5px 10px 0px #777;
+					-webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px;
+					border:2px #F1C7AB outset;
+					}
+
+.gallery p			{width:97%; margin-top:1em; padding:.5em; /*background-color:white; /**/
+					-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;
+					}
+.gallery h2			{text-align:center;/**/
+					}
+					
+.aanUit				{display:none;	} /* Hide the photo's at first */			
+
+.fotocontainer		{margin-top:1em; overflow:hidden; text-align:center;}
+.foto				{position:relative; display:inline-block;
+					width:106px; height:106px; line-height:104px; /* Line height makes it possible to align the img vertically */
+					padding:0%;  margin:5px .5%;
+					text-align:center;
+					background-color:rgb(253,248,244); background-color:rgba(253,248,244,.6);/* */
+					border:1px white inset;
+					}
+.foto img			{max-height:100px; max-width: 100px; vertical-align:middle;}
+
+.blokkendoos		{margin-top:1em; overflow:hidden; text-align:center;}
+.blok1				{position:relative; display:inline-block;
+					width:250px; padding:0.5%;  margin:5px 1%;
+					text-align:center;
+					}
+.blok1 img			{max-height:150px; max-width: 250px;}
+
+.blok2				{position:relative; display:inline-block; vertical-align: middle;
+					max-width:420px;/*height:250px;/**/
+					padding:0; margin:0;/*border:1px white inset;/**/
+					/*width:45%;text-align:center;/**/
+					}
+.blok2 img			{width:80%;
+					/*max-height:200px;/**/
+					}
+
+/* Div's that contain a form are given class 'form': */
+.form				{width:98%; padding:1% 1%; margin:0 auto; margin-bottom:20px;
+					background-color:#F8F8F8;
+					background: -webkit-linear-gradient(left, #F0F8FF 65%, #F7DDCC); /* For Safari 5.1 to 6.0 */
+    				background: -o-linear-gradient(left, #F0F8FF 65%, #F7DDCC); /* For Opera 11.1 to 12.0 */
+    				background: -moz-linear-gradient(left, #F0F8FF 65%, #F7DDCC); /* For Firefox 3.6 to 15 */
+    				background: linear-gradient(315deg, #F7DDCC, #F0F8FF, #F7DDCC); /* Standard syntax (must be last) */
+					border: 2px outset #ddd;"
+					}
+
+.form .submit button{width:6em; height:2.0em; margin-top:1em; outline:0;}
+
+.section		 	{position:relative; float:left; clear:both; bottom:0;
+					width:1200px; left:-264px; /* Both controlled by JS /**/
+					border-top:1px dashed #88CCFF;/*border-bottom:1px solid #FF5050; /* Turn on to see sections */
+					padding-top:0.5em;padding-bottom:0.5em;/**/
+					margin-bottom:2em;
+					background-color:rgba(0,0,0,0.02);
+					/*background-color:rgba(196,255,196,0.5);/**/
+					}
+				
+.sectionleftbar		{position:relative; float:left; /* Same width as leftbar */
+					width:22%; /* Controlled by JS /**/
+					/*background-color:rgba(221,118,49,0.5);/**/
+					} 
+
+.sectionleftbar button {position:relative; display:inline-block; width:100%; max-width:9em; margin-top:0.4em; /* required for text-overflow settings to work*/
+					white-space:pre-line;
+					/*font-family: Georgia, serif; /**/
+					font-size: medium;
+					/**overflow: hidden;
+					text-overflow: ellipsis;/* cuts text off and adds 3 dots*/
+					border-top: 1px solid #caa;background: #fee;
+					background: -webkit-gradient(linear, left top, left bottom, from(#dbb), to(#fee));
+					background: -webkit-linear-gradient(top, #dbb, #fee);
+					background: -moz-linear-gradient(top, #dbb, #fee);
+					background: -ms-linear-gradient(top, #dbb, #fee);
+					background: -o-linear-gradient(top, #dbb, #fee);
+					padding: 5px 10px;
+					outline: 0; /* In some browsers (e.g. Chrome) the 'outline' (that indicates 'active elements' when selecting by means other than a mouse) stays on when clicking doesn't load a new page, so turn it off here */
+					-webkit-border-radius: 8px;
+					-moz-border-radius: 8px;
+					border-radius: 8px;
+					-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+					-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+					box-shadow: rgba(0,0,0,1) 0 1px 0;
+					text-shadow: rgba(0,0,0,.8) 1px 1px 0;
+					color: #ffa;
+					text-decoration: none;
+					vertical-align: middle; text-align:center;
+   }
+
+.sectionleftbar button.hover,
+.sectionleftbar button:hover {
+					/*background:url('../images/schaduw03.png'); background-size:contain; background-repeat:repeat-x;/**/
+					border-top: 1px solid #aaa;
+					background: -webkit-gradient(linear, left top, left bottom, from(#dbb), to(#fee));
+					background: -webkit-linear-gradient(top, #dbb, #fee);
+					background: -moz-linear-gradient(top, #dbb, #fee);
+					background: -ms-linear-gradient(top, #fff, #eee);
+					background: -o-linear-gradient(top, #dbb, #fee);
+					text-shadow: rgba(0,0,0,0) 1px 1px 0;
+					-webkit-box-shadow: rgba(60,30,10,1) 0px 2px 5px -1px;
+					-moz-box-shadow: rgba(60,30,10,1) 0px 2px 5px -1px;
+					color:#444;}
+.sectionleftbar button.active,
+.sectionleftbar button:active {
+					-webkit-box-shadow: rgba(60,30,10,1) 0px 2px 0px -1px;
+					-moz-box-shadow: rgba(60,30,10,1) 0px 2px 0px -1px;	}
+					
+#contact			{position:relative; float:left;z-index:3; /*(z-index '#content'+1)*/
+					width:22%; height:1em; /* Both controlled by JS /**/
+					margin:0 auto;
+					overflow:visible;}
+#contact .inner		{font-family:"Comic Sans MS", sans MS, Arial, Helvetica, sans-serif;
+					font-size:small; /* Controlled by JS /**/
+					text-align:center;
+					width:92%;max-width:330px;padding:.5em 1%;margin:0.5em auto 0.8em auto;
+					-webkit-box-shadow:0 0 40px 5px #FAEBE1 inset;
+					-moz-box-shadow:0 0 40px 5px #FAEBE1 inset;
+					box-shadow:0 0 40px 5px #FDD inset;/**/
+					background-color:rgb(255,255,255); background-color:rgba(255,255,255,.7);/**/
+					/*background-color:#FDF8F4; /**/
+					-webkit-border-radius: 1.5em / 1.2em;
+					-moz-border-radius: 1.5em / 1.2em;
+					border-radius: 1.5em / 1.2em;
+					border:1px #FDD outset; /* */
+					}
+#contact p			{display:inline; margin:0; text-align:center;}					
+#contact address	{display:inline-block; margin:0; font-size:.9em; }
+				
+#windowsize			{font-family:Helvetica, sans-serif; font-size:.6em; text-align:center;
+					margin-top:8em; /* Controlled by JS /**/
+					}
+
+.sectioncontent		{position:relative; display:inline-block;float:left; /**/
+					width:78%; /* Controlled by JS /**/
+					/*background-color:rgba(238,189,157,0.5);/**/
+					} 
+
+.leftbarcontent		{clear:both; position:relative; width:84%; padding:0 8% 0 8%; background:none; text-align:center;}
+.leftbarcontent table {margin-left:-1em}
+.leftbarcontent td	{padding:0 0 .5em .5em;}
+
+.leftbarcontent .pic {position:relative; display:inline-block; width:40%; max-width:100px;}
+.leftbarcontent .pic img {width:100%;}
+
+
+article				{padding:0 2%; }
+
+
+/*.article p			{font-size:1.2em; } /* Werkt niet, geen idee waarom niet (padding bijvoorbeeld werkt wel) /**/
+
+#directions button	{line-height:1.4em; border-radius:.5em; }
+#directions input	{border-radius:.5em; width:300px;}
+#directions p		{margin:0; padding:0; text-align:center;}/**/
+
+.centreer			{display: block; margin:0px auto;}
+
+#footer 			{clear:both; position:relative; overflow:hidden; z-index:2000; margin:0 auto;
+					background:url('../images/schaduw02.png'); background-size:contain; background-repeat:repeat-x; background-color:#99DDFF;
+					width:1200px; font-size:medium; /* Both controlled by JS /**/
+					margin-top:-1.7em; height:2em; }
+#footer p			{color:#FFFF00;text-align:center; 
+					font-style:italic; font-size:90%; margin:.4em 0 0 0; line-height:.75em; }
+
+/*De definition-list properties*/
+dl					{position:relative; width:100%; 
+					/*font-size: 1.2em;/**/
+					}
+
+dl dt				{color: rgb(224, 77, 16);
+				    /*font-family: 'TimesNewRomanPSMT', 'Times New Roman', serif;/**/
+				    font-size: 1.4em;/**/
+				    font-style: italic;
+				    font-weight: 400;
+				    line-height: 23px;
+				    padding-bottom: 5px;
+				    margin-top:25px;
+				    margin-left:.5em;
+				    text-align: left;}
+
+/* dl dt:before 		{content: "\00a0 \00a0";} /* Spaces added via 'escaped Unicode' \00a0 */
+/* dl dt.streep:before {content: "- "; color:black; font-weight:bolder;}/**/
+
+dl dd, dl li		{color: rgb(0, 0, 0);
+				    /*font-family: 'TimesNewRomanPSMT', 'Times New Roman', serif;/**/
+				    
+				    /*line-height: 21px;/**/
+				    text-align: left;}
+dl dd				{padding:0 0 0 10px;} /* Zodat ie een beetje inspringt */				    
+/*dl dd p, dl dd li	{font-size:medium;} /* Zodat de p en li font size niet stacken met de dl font size */				    
+
+/* Navigation Extra */
+
+/* Forms */
+
+
+form 	{ text-align:left; margin:20px;	}
+
+label, submit, input, textarea 	{ 
+		border:0; padding:0; margin:0;
+		}
+	
+label 	{
+		float:left; margin-right: 1em; margin-top:.5em;
+		text-align:left; display:block;
+		}
+
+textarea {border: 2px inset #bbb;
+		 padding:.5em; margin:0 5% 0 0;
+		}
+
+input { display:block;clear:both;width:95%;max-width:24em; 
+		padding:0.2em .5em;
+		color: #444;
+		background-color:white;
+		border: 2px inset #bbb;
+		}
+	
+input { }
+
+	
+textarea { }
+
+select { }
+	
+#contactForm ol	{
+		list-style-type:none;
+		}
+		

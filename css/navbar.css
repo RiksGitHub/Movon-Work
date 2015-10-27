@@ -1,0 +1,250 @@
+﻿/* Main menu settings (#navbar)*/
+#navbar 		{position:relative; z-index:1000;  float:right; text-align:center; /* Aligning the ul's centered in the right-aligned div*/
+				padding:0;
+				width :78%; /* Controlled by JS /**/
+				}
+
+#navbar>ul 		{position:relative;
+				margin-top:.2em; margin-bottom:.1em; /* Vertical spacing between main menu items*/
+				}
+
+/* De container waar de menu items (de eerste level li's) in zitten, maar ook lager geneste ul's:*/
+#navbar ul 		{position:relative; /**/
+				display:inline-block; /*vertical-align:top;/**/
+				list-style:none;
+				}
+
+/* De 1e level ul's hebben class 'menu' */				
+#navbar ul.menu	{width:11.25%;} /* Controlled by JS /**/
+
+#navbar ul li 	{position:relative; /**/
+				width:100%; /* Perentage of ul width (determined earlier) */
+				padding:0; margin:0; 
+				}
+
+#navbar ul li>a:after {content:url('../images/pin.png'); 
+				display: block; /* to wrap around all the text as a single block */
+				position: absolute; /* 'abolute' is required, so it can be on top of the element */
+				right:-4%;
+  				top: -50%;} 
+
+/* li's with nested ul's are classed 'sub', so the can be given a different look: /**/
+#navbar ul li.sub>a:after {content:url('../images/pinsX.png');
+				display: block; float:left;
+				right:65%; /* If left and negative, hovering also moves to left (not good) /**/
+  				top: -20%;
+				}
+
+/* Submenu and main menu: */   
+#navbar ul li a {position:relative; display:block; /* to wrap around all the text as a single block */
+				top:-15%;
+				text-align:center;
+				width:100%;
+				padding:.2em .1em .3em .1em;
+				line-height:1em;/**/
+				font-family:"Comic Sans MS", sans MS, Arial, Helvetica, sans-serif; /* Menu font */
+				font-size:9pt; /* font-size:12px;/**/
+				color:#f8fcff;
+				text-decoration:none; /* Removing the default underline */
+				text-shadow:1px 1px 0.2px #468; 
+				-webkit-box-shadow:0px 3px 4px 0px #7C7876; -moz-box-shadow:0px 3px 4px 0px #7C7876; box-shadow:0px 3px 4px 0px #7C7876;
+				-webkit-border-radius: 0.5em 0.5em 0.5em 0.5em / 0.5em 0.5em 0.5em 0.5em;
+				-moz-border-radius: 0.5em 0.5em 0.5em 0.5em / 0.5em 0.5em 0.5em 0.5em; 
+				border-radius:0.5em;
+				}
+	
+#navbar ul li.sub>a { /* Set durations for transitions (when hovering menu items): */
+				-webkit-transition: all .1s ease-out .0s, margin .05s linear .0s, -webkit-transform .2s cubic-bezier(1,-0.75,0.5,1.2) .0s; /* For Safari 3.1 to 6.0 */
+			    transition: all .1s ease-out .0s, margin .05s ease-out .0s, transform .2s cubic-bezier(1,-0.75,0.5,1.5) .0s;
+			    transition: background 1s ease-out .0s;  /**/
+				-webkit-border-radius: 6em 6em 3em 3em / 3.3em 3.3em 1em 1em;
+				-moz-border-radius: 6em 6em 3em 3em / 3.3em 3.3em 1em 1em;
+				border-radius:6em 6em 3em 3em / 3.3em 3.3em 1em 1em;
+				}
+	
+/* Main menu: where different from items with submenu*/
+#navbar>ul>li>a {position:relative;
+				height:70%;/*vertical-align:middle;/**/
+				width:94%; /* Controls the horizontal spacing between the menu items (the <a> is inside the <li>, so hovering still works) */
+				background-color:rgb(200,225,245);
+				background:	url('../images/schaduw02.png'), /* (Mozilla doesn't like it when it's only 1px wide) /**/
+							linear-gradient(-170deg, rgba(240,248,255,1) 1%, rgba(200,225,245,0.5) 60%, rgba(80,140,180,0.8)),
+							linear-gradient(140deg, rgba(240,248,255,0.5) 1%, rgba(200,220,245,0.5) 60%, rgba(60,140,160,1)); 
+				background-size:contain, auto, auto;
+				background-repeat:repeat-x, no-repeat, no-repeat;
+				background-position:top left,top left,top left;
+				text-shadow:1px 1px 0.2px #136; 
+				color:#f0f8ff;
+				border-bottom:1pt #444466 outset; /* Border settings for menu items unselected*/
+				-webkit-transition: all .1s ease-out;
+				transition: all .1s ease-out .0s; /* Transition settings for non-sub main menu items */
+				}
+	
+#navbar>ul>li.sub>a {background-color:rgb(255,220,220); 
+				background:url('../images/schaduw02.png'),linear-gradient(#FFF 5%,rgb(255,220,220) 60%, rgba(180,80,80,0.6) ); 
+				background-size:contain, auto;
+				background-repeat:repeat-x, no-repeat;
+				background-position:top left,top left;
+				color:#ffe;
+				border-bottom:1pt #664444 outset;
+				}
+
+/* Only for design with active page tab indicator (give the menu item on the page the 'active' class): */
+/*#navbar ul li.active a {
+	color:white;
+	font-style:italic;
+	border:.1em #CCFFFF solid;
+	background:url('../images/schaduw01.png'); background-size:contain; background-repeat:repeat-x; /*background-color:#CC77cc;*/
+/*	}
+*/
+
+	
+/* ===============================================================================
+Main menu items when hovered, where different from items with submenu: */
+#navbar>ul>li:hover>a,
+#navbar>ul>li.hover>a { /* This line is required for IE 6 and below */
+	-webkit-box-shadow:0 6px 9px -2px #7C7876; -moz-box-shadow:0 6px 9px -2px #7C7876; box-shadow:0 6px 9px -2px #7C7876;
+	/*background:none; /**/
+	background-color:red;/**/
+	position:relative;
+	-webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em;
+	-moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em;
+	border-radius:.25em .25em .25em .25em / .5em .5em .5em .5em;
+	}
+
+#navbar>ul>li:hover>a:after ,
+#navbar>ul>li.hover>a:after {content:url('../images/pin2.png');
+	display: block;
+	position: absolute; /* 'abolute' is mandatory, so it can be on top of the element */
+	right:-4%;
+  	top: -50%;} 
+
+#navbar>ul>li:active>a,
+#navbar>ul>li.active>a { /* This line is required for IE 6 and below */
+	-webkit-box-shadow:0 5px 20px 5px #7C7876; -moz-box-shadow:0 5px 20px 5px #7C7876; box-shadow:0 3px 4px -1px #7C7876;
+	background:url('../images/schaduw01.png'); background-size:contain; background-repeat:repeat-x;
+	background-color:rgb(255,255,255); background-color:rgba(255,255,255,1);
+	}
+
+#navbar>ul>li.sub:hover>a,
+#navbar>ul>li.sub.hover>a { /* This line is required for IE 6 and below */
+	cursor:default; /* 'Default' is menu arrow. 'Pointer' = link default finger */
+	-webkit-box-shadow:0px 3px 4px 0px #7C7876; -moz-box-shadow:0px 3px 4px 0px #7C7876; box-shadow:0px 3px 4px 0px #7C7876;
+	background:url('../images/schaduw03.png'); background-size:contain; background-repeat:repeat-x;
+	background-color:rgb(260,240,240); background-color:rgba(260,240,240,1);
+	color:white;
+	/*border:1pt #FAEBE1 double; /* Double gives it a sort of smoother result when thickness 1pt is used */
+	}
+	
+#navbar>ul>li.sub:hover>a:after,
+#navbar>ul>li.sub.hover>a:after {content:url('../images/pinsX2.png');
+	display: block;
+	right:65%; /**/
+  	top: -20%;
+	}
+
+/* Submenu item general settings */
+#navbar ul ul {
+	/*font-size:0.9em;/**/
+	display:none; /* Submenus are hidden by default: */
+	position:absolute; /* Needs to be absolute, so it doesn't disturb the list when it is displayed */
+	z-index:1; /* With position set to absolute, everything contained in this will be at this z index */
+	width:60%;
+	left:20%;
+	top:98%;
+	overflow:visible;
+	-webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em;
+	-moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em;
+	border-radius:0 0 .5em .5em/ 0 0 .5em .5em;
+	border-bottom:3px #ddf solid;
+	-webkit-box-shadow:0px 3px 4px 0px #567; -moz-box-shadow:0px 3px 4px 0px #567; box-shadow:0px 3px 4px 0px #567;
+	background:url('../images/schaduw03.png'); background-size:contain; background-repeat:repeat-x;
+	background-color:#eee;
+	 /**/
+	}
+
+#navbar ul ul li {
+	position:relative; 
+	clear:left;
+	/*width:300%;/**/
+	/*padding-top: .7em; /**/
+	}
+
+/* Submenu item settings (overwrites settings from top menu) */
+#navbar ul ul li a,
+#navbar ul li.active li a,
+#navbar ul li:hover ul li a,
+#navbar ul li.hover ul li a { /* This line is required for IE 6 and below */
+	position:relative; /**/
+	margin:.2em 0 ; /*defines spacing between the submenuitems (while still being selectable)*/
+	left:-30%; width:154.5%;
+	display:block; /* This stacks submenu items vertically */
+	padding:0.4em 0;
+	line-height:1em; font-size:small;
+	font-family:Helvetica, sans-serif;
+	background-color:rgb(200,225,245);
+	background:	url('../images/schaduw02.png'), /* (Mozilla doesn't like it when it's only 1px wide) /**/
+				linear-gradient(-170deg, rgba(240,248,255,1) 1%, rgba(200,225,245,0.5) 60%, rgba(80,140,180,0.8)),
+				linear-gradient(140deg, rgba(240,248,255,0.5) 1%, rgba(200,220,245,0.5) 60%, rgba(60,140,160,1)); 
+	background-size:contain, auto, auto;
+	background-repeat:repeat-x, no-repeat, no-repeat;
+	background-position:top left,top left,top left;
+	-webkit-border-radius: 0.5em 0.5em 0.5em 0.5em / 0.5em 0.5em 0.5em 0.5em;
+	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em / 0.5em 0.5em 0.5em 0.5em; 
+	border-bottom:1pt #444466 outset; /* Border settings for menu items unselected*/
+	border-radius:0.5em;
+	text-align:center; /* */
+	text-shadow:1px 1px 0.5px #212; 
+	}
+	
+#navbar ul ul li a:after,
+#navbar ul li.active li a:after,
+#navbar ul li:hover ul li a:after,
+#navbar ul li.hover ul li a:after {content:url('../images/pin.png');
+	display: block;
+	position: absolute; /* 'abolute' is mandatory, so it can be on top of the element */
+	right:-8%;
+  	top: -1.5em;}
+   
+/* ==================================================================================
+Sub menu items hovering settings (overwrites Sub menu item settings) */
+#navbar ul ul li a:hover,
+#navbar ul li.active ul li a:hover,
+#navbar ul li:hover ul li a:hover,
+#navbar ul li.hover ul li a:hover { /* This line is required for IE 6 and below */
+	background-color:red;
+	-webkit-box-shadow:0 6px 9px -2px #7C7876; -moz-box-shadow:0 6px 9px -2px #7C7876; box-shadow:0 6px 9px -2px #7C7876;/**/
+	}
+
+#navbar ul ul li a:hover:after,
+#navbar ul li.active ul li a:hover:after,
+#navbar ul li:hover ul li a:hover:after,
+#navbar ul li.hover ul li a:hover:after {content:url('../images/pin2.png');
+	display: block;
+	position: absolute; /* 'abolute' is mandatory, so it can be on top of the element */
+	right:-8%;
+  	top: -1.5em;}
+
+
+/* Make the sub menus appear on hover */
+#navbar ul li:hover ul,
+#navbar ul li.hover ul { /* This line is required for IE 6 and below */
+	/*max-height:500px; /* Show the sub menus */
+	/*transition: max-height 0.75s ease-in;/**/
+	display:block; /* Show the sub menus */
+	}
+
+/*#navbarcenterdiv {position:relative;} /*right:50%;}/**/			
+#navbarspace	{position:relative; /* only for clearing the room in the left bar underneath the navbar */
+				width:90%; margin:0 5%; /**/
+				margin-top:2em; /* to counteract the padding of the #content div and the .section div */
+				margin-bottom:0em;
+				height:14em; /*navbar height plus contact table height (plus nabar vertical padding (plus navbar vertical margin)) */
+				-webkit-border-radius: 5em 5em 5em 5em / 1.5em 1.5em 1.5em 1.5em;
+				-moz-border-radius: 5em 5em 5em 5em / 1.5em 1.5em 1.5em 1.5em;
+				border-radius: 5em 5em 5em 5em / 4em 4em 4em 4em;
+				-webkit-box-shadow:0 0 40px 20px #FAEBE1;
+				-moz-box-shadow:0 0 40px 20px #FAEBE1;
+				box-shadow:0 0 40px 20px #DD7631 inset;
+				background-color:#F4D8C8; /* so it can be recognized if it's the wrong size */
+				}

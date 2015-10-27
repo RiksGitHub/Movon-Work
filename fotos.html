@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<!-- #BeginTemplate "Sjabloon%20flex.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- Add a little picture on the tab: -->
+<link rel="icon" href="images/Movico.png" type="image/x-icon" />
+
+<!-- #BeginEditable "metadata" -->
+
+<meta name="description" content="Movon, school voor modevakonderwijs, regio Gouda">
+<meta name="keywords" content="naailes, naailessen, cursussen, workshops, gouda, movon, annelies,
+annelies van den broek, broek, herenkleding, dameskeding, damesmode, herenmode, nadenrol, stofknopen">
+
+<!-- #EndEditable -->
+
+<!-- The following is required so phones determine text size and stuff based on ACTUAL window size, and not some virtual larger size -->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<!--meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" /-->
+
+<!--Zodat oude IE's er nog wat van snappen:-->
+<!--[if lt IE 9]> <!-- if less than internet explorer 9 -->
+	<script src="js/html5shiv.js" type="text/javascript"></script> <!-- Zodat oude (IE) browsers wat van de nieuwe HTML5 taal kunnen gebruiken -->
+<![endif]-->
+
+<!--[if lt IE 7]> <!-- Stylesheet to fix (stuff like) png transparency for IE<7-->
+	<link rel="stylesheet" type="text/css" href="iepngfix.css">
+<![endif]-->
+
+<!-- #BeginEditable "scripts" -->
+
+<!--De code om jquery aan de pagina te koppelen:-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!-- De verwijzing naar de Prettyphoto (javascript) plugin (en bijbehorend stylesheet): -->
+<script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<link href="js/prettyPhoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+
+<script>
+$(document).ready(function(){
+//theme: 'pp_default'/ light_rounded / dark_rounded / light_square / dark_square / facebook
+$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false,counter_separator_label:" uit ",theme:'dark_rounded'}) 
+});
+</script>
+
+<!-- voor het 'togglen' van de foto albumpjes: -->
+<script>
+$(document).ready(function(){
+   //Voor het tonen/verbergen van alles tegelijk:
+   $("#verbergAlles").click(function(){
+   $(".aanUit").fadeOut(200);
+   $("#toggle0").fadeIn(20); //#toggle0 is alleen voor als er niks getoond word (zodat er nog iets te zien is)
+   });
+   $("#toonAlles").click(function(){
+   $(".aanUit").fadeIn(200);
+   $("#toggle0").fadeOut(20); //#toggle0 is alleen voor als er niks getoond word (zodat er nog iets te zien is)
+   });
+   //Voor het togglen per galerie:
+   $("#aanUit1").click(function(){
+   $(".aanUit").fadeOut();
+   $("#toggle1").toggle(20); //if this toggle time is equal or lower than the fadeout, it goes wrong when everything is visible and a toggle button is used
+   });
+   $("#aanUit2").click(function(){
+   $(".aanUit").fadeOut();
+   $("#toggle2").toggle(20); //if this toggle time is equal or lower than the fadeout, it goes wrong when everything is visible and a toggle button is used
+   });
+   $("#aanUit3").click(function(){
+   $(".aanUit").fadeOut();
+   $("#toggle3").toggle(20); //if this toggle time is equal or lower than the fadeout, it goes wrong when everything is visible and a toggle button is used
+   });
+   $("#aanUit4").click(function(){
+   $(".aanUit").fadeOut();
+   $("#toggle4").toggle(20); //if this toggle time is equal or lower than the fadeout, it goes wrong when everything is visible and a toggle button is used
+   });
+   $("#aanUit5").click(function(){
+   $(".aanUit").fadeOut();
+   $("#toggle5").toggle(20); //if this toggle time is equal or lower than the fadeout, it goes wrong when everything is visible and a toggle button is used
+   });
+});
+</script>
+
+<!-- Include the Google Maps API library - required for embedding maps >
+<script src="http://maps.googleapis.com/maps/api/js"></script-->
+
+<!-- #EndEditable -->
+
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/navbar.css" rel="stylesheet" type="text/css">
+<link href="css/windowsize.css" rel="stylesheet" type="text/css">
+
+<!-- #BeginEditable "doctitle" -->
+
+
+	<title>Movon Fotogalerie</title>
+	
+
+<!-- #EndEditable -->
+	
+
+</head>
+
+<body onresize="RikFunction()"><!-- Adjusting stuff with JS-->
+
+	<div id="wrapper">
+	
+		<div id="header">
+			<div id="logobackground">
+				<div id="logo">
+					<!--a href="index.html"><img src="images/movon_logo.png" alt="Home" title="Movon Home" /></a-->
+				</div>
+			</div> <!--close logobackground-->
+			
+			<div id="title">
+				<div id="headerpic" style="width:100%; margin:0 auto;"> <!-- ID voor JS -->
+					<a href="index.html">
+						<img  src="images/header.png" alt="" title="Movon Home" style="width:100%" />
+					</a>
+				</div>
+			</div> <!--close title-->
+		</div> <!--close header-->
+		
+		<div id="navbar">
+			
+			<ul class="menu">
+		      <li title="Movon Home"><a href="index.html"><br />HOME</a></li>
+			</ul>
+			
+			<ul class="menu">  
+			  <li class="sub"><a href="javascript:void(0)"><br />CURSUSSEN</a>
+		         <ul class="submenu">
+		            <li title="Algemene cursusinformatie"><a href="cursusinformatie.html">Algemene cursusinformatie</a></li>
+		            <li title="Cursusaanbod"><a href="cursusaanbod.html">Aangeboden cursussen</a></li>
+		            <li title="Knipmode Cursussen"><a href="knipmodenaaicursussen.html">Cursussen van Knipmode</a></li>
+		         </ul>
+		      </li>
+		    </ul>
+			
+			<ul class="menu">  
+		      <li class="sub"><a href="javascript:void(0)"><br />WORKSHOPS</a>
+		         <ul class="submenu">
+		            <li title="Algemene workshopinformatie"><a href="workshops.html#workshopalgemeen">Algemene informatie</a></li>
+		            <li title="Workshop textielwarenkennis"><a href="workshops.html#textielwarenkennis">Textielwaren kennis</a></li>
+		            <li title="Workshop paspop maken op eigen maat"><a href="workshops.html#paspoppen">Paspop op eigen maat</a></li>
+		            <li title="Workshop paspopje maken op halve schaal"><a href="workshops.html#paspopje">Paspopje halve schaal</a></li>
+		            <li title="Workshop herenpantalon of herencolbert"><a href="workshops.html#herenpantalon">Herenpantalon of herencolbert</a></li>
+		         </ul>
+		      </li>
+		    </ul>
+			
+			<ul class="menu">  
+		      <li class="sub"><a href="javascript:void(0)">PRODUCTEN<br />/SERVICE</a>
+		         <ul class="submenu">
+		            <li title="De nadenrol"><a href="nadenrol.html">Nadenrol</a></li>
+		            <li title="Stofknopenservice"><a href="knopenservice.html">Stofknopen</a></li>
+		            <li title="Paspopje"><a href="paspopje.html">Paspopje</a></li>
+		         </ul>
+		      </li>
+			</ul>
+			
+			<ul class="menu">	
+		      <li title="Foto's"><a href="fotos.html"><br />FOTOGALERIE</a></li>
+		    </ul>
+			
+			<ul class="menu">
+			  <li title="Movon contactinformatie"><a href="contact.html"><br />CONTACT</a></li>
+		    </ul>
+			
+			<ul class="menu">
+			  <li title="Algemene voorwaarden"><a href="algemenevoorwaarden.html">ALGEMENE<br />VOORWAARDEN</a></li>
+		    </ul>
+			
+			<ul class="menu">  <li class="sub"><a href="links.html"><br />VAKGENOTEN</a>
+		         <ul class="submenu">
+		            <li title="Landelijk Platform Modevakonderwijs"><a href="http://www.landelijkplatformmodevakonderwijs.nl/SiteLPM/Home.html" target="_blank">LPM</a></li>
+		            <li title="Branchevereniging Mode Ambachten"><a href="https://www.modeambachten.nl" target="_blank">BMA</a></li>
+		            <li title="Beauty V.o.F."><a href="http://www.beautyvof.com" target="_blank">Beauty V.o.F.</a></li>
+		            <li title="Knipmode"><a href="http://www.knipmode.nl" target="_blank">Knipmode</a></li>
+		            <li title="Atelier 88"><a href="http://www.atelier88.nl" target="_blank">Atelier 88</a></li>
+		            <li title="Modestudio Nelleke Vos"><a href="http://www.modestudionellekevos.nl" target="_blank">Modestudio<br />Nelleke Vos</a></li>
+		            <li title="Modevakschool Stitch &amp; Create"><a href="http://www.stitchandcreate.nl" target="_blank">Modevakschool Stitch &amp; Create</a></li>
+		            <li title="De allereerste Movon site"><a href="http://www.movon.info/movon_oud/Movon/Home.html" target="_blank">Movon oud I</a></li>
+		            <li title="De vorige Movon site"><a href="http://www.movon.info/movon_oud2/index.html" target="_blank">Movon oud II</a></li>
+		         </ul>
+		      </li>
+			</ul>
+		<!--/div> <!-- close navbarcenterdiv -->
+		</div> <!--close navbar-->
+		
+		<div id="contact">
+			<div class="inner">
+				<p><strong> Algemene leiding/docente: </strong><span style="display:inline-block;"><em> Annelies van den Broek </em></span></p>
+				<br /><Address> Beijerscheweg 58, </address>&nbsp;<address> 2821NH, Stolwijk </address>
+				<p><span style="display:inline-block;"> &#9742; <em> 0182-521884 </em></span></p>
+			</div>
+		</div> <!--close contact-->
+		
+		<div id="contentarea">
+			<div id="leftbar">
+			<!--p>#leftbar</p-->
+			</div> <!--close leftbar-->
+			
+			<div id="content">
+			
+				<!-- #BeginEditable "content" -->
+			
+				<div class="section" style="border:0px; background:none;">
+
+					<div class="sectionleftbar">
+						<div class="leftbarcontent">
+							<p id="windowsize">&nbsp;</p>
+							<p style="margin-top:1em; text-align:center;">Wat fotootjes, met een druk op de knop:</p>
+							<br />
+							<button id="aanUit5" title="Wat fotootjes van de lesruimte (w.i.p.)">De lesruimte</button> <!-- id voor het jQuery togglen -->
+							<button id="aanUit4" title="Naaitechnieken">Naaitechnieken</button> <!-- id voor het jQuery togglen -->
+							<button id="aanUit3" title="Blik op Stof">Blik op Stof</button> <!-- id voor het jQuery togglen -->
+							<button id="aanUit2" title="Herenkleding">Herenkleding</button> <!-- id voor het jQuery togglen -->
+							<button id="aanUit1" title="Dameskleding">Dameskleding</button> <!-- id voor het jQuery togglen -->
+							<br />
+							<button id="toonAlles" title="Toon alle foto's tegelijk" style="width:5em; padding:8px 5px;">Toon<br />alles</button> <!-- id voor het jQuery togglen -->
+							<!--&ensp; <!-- Spatie(s) -->
+							<button id="verbergAlles" title="Verberg alle foto's" style="width:5em; padding:8px 5px;">Verberg<br />alles</button>
+
+						</div> <!--close leftbarcontent-->
+						
+					</div> <!--close sectionleftbar-->
+					
+					<div class="sectioncontent">
+						<article>
+							
+							<div class="gallery aanUit" id="toggle5"> <!-- class voor nog wat CSS -->
+								<h2>De Lesruimte</h2>
+								<p>Hieronder enkele foto's vanuit de lesruimte (op de locatie aan de Beijerscheweg). Wellicht dat er in de toekomst nog wat meer (of wat betere) kunnen worden toegevoegd...
+								</p>	
+								<div class="fotocontainer">
+									<div class="foto">
+										<a href="galerie/lesruimte/01.jpg" rel="prettyPhoto[Lesruimte]"><img alt="Lesruimte overzicht." title="Fotootjes van de lesruimte" src="galerie/lesruimte/tmb/01.png" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/lesruimte/02.jpg" rel="prettyPhoto[Lesruimte]"><img alt='Groothoekopname van de lesruimte. (Oogt wat ruimer dan de werkelijkheid.)' title="Fotootjes van de lesruimte" src="galerie/lesruimte/tmb/02.png" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/lesruimte/03.jpg" rel="prettyPhoto[Lesruimte]"><img alt='Groothoekopname van de lesruimte. (Oogt wat ruimer dan de werkelijkheid.)' src="galerie/lesruimte/tmb/03.png" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/lesruimte/04.jpg" rel="prettyPhoto[Lesruimte]"><img alt="Lesruimte detail." title="Fotootjes van de lesruimte" src="galerie/lesruimte/tmb/04.png" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/lesruimte/05.jpg" rel="prettyPhoto[Lesruimte]"><img alt="Lesruimte detail." title="Fotootjes van de lesruimte" src="galerie/lesruimte/tmb/05.png" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+							</div> <!-- Close #toggle5 -->
+
+							<div class="gallery aanUit" id="toggle4" style="display:block;"> <!-- class 'gallery' voor nog wat CSS, 'aanUit' voor alles wat aan/uit kan worden gezet, 'toggle' id voor het togglen, 'display:block' omdat deze default aan staat -->
+								<h2>Naaitechnieken</h2>
+								<p>Bij de vakopleidingen tot costumière of kleermaker in het damesmodevak moeten veel technieken worden aangeleerd. Voordat een techniek in een kledingstuk wordt toegepast
+								wordt deze - om te oefenen - eerst gemaakt uit  een restje stof of een coupon. De uitvoering van een techniek moet voldoen aan de exameneisen die gesteld worden door het
+								Landelijk Platform Modevakonderwijs.</p>
+								<p>Het maken van alleen een techniek  heeft meerdere voordelen:  er wordt zelfvertrouwen  opgebouwd, als de techniek mislukt wordt er slechts een klein stukje stof weggegooid
+								en alle technieken worden bewaard als naslagwerk. Wanneer technieken direct in kledingstukken worden geoefend, dan gaan ze verloren wanneer het kledingstuk is afgedragen.</p>
+								<p>Hieronder ziet u hoe diverse technieken worden uitgevoerd.</p>
+	
+								<div class="fotocontainer">
+									<div class="foto">
+										<a href="galerie/technieken/01.jpg" rel="prettyPhoto[Technieken]"><img alt="Gepaspoileerd zijden knoopsgat, in mohair-boud&eacute; stof" title="Gepaspoileerd zijden knoopsgat, in mohair-boud&eacute; stof" src="galerie/technieken/tmb/01.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/02.jpg" rel="prettyPhoto[Technieken]">
+											<img alt="Rimpels aan- en tussenzetten | Volant aanstikken en afwerken | Kant aan- en tussenstikken | Naaldplooien en tweelingnaaldstiksels"
+											title="Rimpels aan- en tussenzetten | Volant aanstikken en afwerken | Kant aan- en tussenstikken | Naaldplooien en tweelingnaaldstiksels" src="galerie/technieken/tmb/02.jpg" />
+										</a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/03.jpg" rel="prettyPhoto[Technieken]"><img alt="Stolpplooiverwerking" title="Stolpplooiverwerking" src="galerie/technieken/tmb/03.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/04.jpg" rel="prettyPhoto[Technieken]"><img alt="Plooinaad met rondlopende zoomafwerking" title="Plooinaad met rondlopende zoomafwerking" src="galerie/technieken/tmb/04.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/05.jpg" rel="prettyPhoto[Technieken]"><img alt="Gulpsluiting met taillebelegverwerking zonder knoop" title="Gulpsluiting met taillebelegverwerking zonder knoop" src="galerie/technieken/tmb/05.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/06.jpg" rel="prettyPhoto[Technieken]"><img alt="Gulpsluiting met taillebelegverwerking met knoop" title="Gulpsluiting met taillebelegverwerking met knoop" src="galerie/technieken/tmb/06.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/07.jpg" rel="prettyPhoto[Technieken]"><img alt="Blind verwerkte polosluiting met beleg" title="Blind verwerkte polosluiting met beleg" src="galerie/technieken/tmb/07.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/08.jpg" rel="prettyPhoto[Technieken]"><img alt="Naadzak; klassiek afgewerkt met zig-zag stiksel i.p.v. machinale locksteek" title="Naadzak; klassiek afgewerkt met zig-zag stiksel i.p.v. machinale locksteek" src="galerie/technieken/tmb/08.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/09.jpg" rel="prettyPhoto[Technieken]"><img alt="Mouw met manchet, voor overbloezende wijde mouw" title="Mouw met manchet, voor overbloezende wijde mouw" src="galerie/technieken/tmb/09.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/10.jpg" rel="prettyPhoto[Technieken]"><img alt="Eenvoudige broekritssluiting voor dames- en kinderkleding" title="Eenvoudige broekritssluiting voor dames- en kinderkleding" src="galerie/technieken/tmb/10.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/11.jpg" rel="prettyPhoto[Technieken]"><img alt="Open loop split, afgewerkt en verstevigd met voering" title="Open loop split, afgewerkt en verstevigd met voering" src="galerie/technieken/tmb/11.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/12.jpg" rel="prettyPhoto[Technieken]"><img alt="Blinde ritssluiting in geruite taftzijde" title="Blinde ritssluiting in geruite taftzijde" src="galerie/technieken/tmb/12.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/13.jpg" rel="prettyPhoto[Technieken]"><img alt="Bedekte kopsplit met voering, zoom afgebiesd" title="Bedekte kopsplit met voering, zoom afgebiesd" src="galerie/technieken/tmb/13.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/14.jpg" rel="prettyPhoto[Technieken]"><img alt="Japonmouw met belegen stoflusjes" title="Japonmouw met belegen stoflusjes" src="galerie/technieken/tmb/14.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/15.jpg" rel="prettyPhoto[Technieken]"><img alt="Klassieke mouwsplit met manchet" title="Klassieke mouwsplit met manchet" src="galerie/technieken/tmb/15.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/16.jpg" rel="prettyPhoto[Technieken]"><img alt="Overhemd mouwsplit met manchet" title="Overhemd mouwsplit met manchet" src="galerie/technieken/tmb/16.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/technieken/17.jpg" rel="prettyPhoto[Technieken]"><img alt="Ingenaaide loopsplit voor een trenchcoat" title="Ingenaaide loopsplit voor een trenchcoat" src="galerie/technieken/tmb/17.jpg" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+							</div> <!-- Close #toggle4 -->
+												
+							<div class="gallery aanUit" id="toggle3">							
+								<h2>De Blik op Stof</h2>
+								<p>Wat weet u van de materialen die u gebruikt bij het maken van uw kleding? Hebt u wel eens een stof bekeken onder een garenloepje?
+								Zo niet, bekijk dan hieronder enkele detailfoto’s van stofstalen en ervaar hoe mooi een stof kan zijn in detail.</p> 
+	
+								<div class="fotocontainer">
+									<div class="foto"> <!-- class voor nog wat CSS -->
+										<a href="galerie/stofjes/01.jpg" rel="prettyPhoto[Stofjes]"><img alt="Ikat, of chin&eacute; (platbinding)" title="Ikat, of chin&eacute; (platbinding)" src="galerie/stofjes/tmb/01.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/02.jpg" rel="prettyPhoto[Stofjes]"><img alt="Moulin&eacute; (2 kleur in 1 draad), keper" title="Moulin&eacute; (2 kleur in 1 draad), keper" src="galerie/stofjes/tmb/02.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/03.jpg" rel="prettyPhoto[Stofjes]"><img alt="'Tie and dye' (platbinding)" title="'Tie and dye' (platbinding)" src="galerie/stofjes/tmb/03.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/04.jpg" rel="prettyPhoto[Stofjes]"><img alt="Metaltex (bovenzijde strijkplankovertrek)" title="Metaltex (bovenzijde strijkplankovertrek)" src="galerie/stofjes/tmb/04.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/05.jpg" rel="prettyPhoto[Stofjes]"><img alt="Onderzijde 'strijkplankovertrek' (schuim)" title="Onderzijde 'strijkplankovertrek' (schuim)" src="galerie/stofjes/tmb/05.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/06.jpg" rel="prettyPhoto[Stofjes]"><img alt="Getuft dubbeldoek" title="Getuft dubbeldoek" src="galerie/stofjes/tmb/06.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/07.jpg" rel="prettyPhoto[Stofjes]"><img alt="Linnen (platbinding)" title="Linnen (platbinding)" src="galerie/stofjes/tmb/07.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/08.jpg" rel="prettyPhoto[Stofjes]"><img alt="H&auml;nsel (paardenhaar)" title="H&auml;nsel (paardenhaar)" src="galerie/stofjes/tmb/08.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/09.jpg" rel="prettyPhoto[Stofjes]"><img alt="Ketting tricot" title="Ketting tricot" src="galerie/stofjes/tmb/09.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/10.jpg" rel="prettyPhoto[Stofjes]"><img alt="Velours de panne" title="Velours de panne" src="galerie/stofjes/tmb/10.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/11.jpg" rel="prettyPhoto[Stofjes]"><img alt="Chenille" title="Chenille" src="galerie/stofjes/tmb/11.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/12.jpg" rel="prettyPhoto[Stofjes]"><img alt="Doupion zijde" title="Doupion zijde" src="galerie/stofjes/tmb/12.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/13.jpg" rel="prettyPhoto[Stofjes]"><img alt="Lurex rib" title="Lurex rib" src="galerie/stofjes/tmb/13.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/14.jpg" rel="prettyPhoto[Stofjes]"><img alt="Keper, flanel print" title="Keper, flanel print" src="galerie/stofjes/tmb/14.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/15.jpg" rel="prettyPhoto[Stofjes]"><img alt="Spitskeper" title="Spitskeper" src="galerie/stofjes/tmb/15.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/16.jpg" rel="prettyPhoto[Stofjes]"><img alt="Thule" title="Thule" src="galerie/stofjes/tmb/16.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/stofjes/17.jpg" rel="prettyPhoto[Stofjes]"><img alt="Bedrukt neteldoek (brandnetel) in keperbinding" title="Bedrukt neteldoek (brandnetel) in keperbinding" src="galerie/stofjes/tmb/17.jpg" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+								
+								<p>Stoffen kennen, dus herkennen en toepassen is onderdeel van een opleiding tot costumière, coupeuse/kleermaker. Helaas komt dit onderwerp vaak nauwelijks aan de orde. Veel docenten zijn van mening zijn dat het een weinig inspirerend onderwerp is. 
+								<br />Ieder die met materialen werkt heeft in wezen - een vaak sluimerende - belangstelling voor die materialen. Soms moet die belangstelling gewekt worden. Zo heeft iemand die kleding maakt - bewust of onbewust - belangstelling voor stoffen.</p>
+								<p>
+									Meer kennis kan op aantrekkelijke manier worden opgedaan met behulp van een werkboek het “<a href="http://www.landelijkplatformmodevakonderwijs.nl/SiteLPM/lesmaterialen.html" title='Link naar de LPM pagina van het werkboek "Alledaags Textiel"'>Alledaags Textiel</a>”,
+									uitgegeven door het Landelijk Platform Modevakonderwijs. Dit werkboek, met garenloep, omvat een bescheiden hoeveelheid theorie - voor velen weinig aantrekkelijk - en 66 stofstalen met analyses om te voelen, te bekijken en zelf te controleren met brandproef en
+									garenonderzoek. Het is een zeer plezierig “doe-boek”.
+								</p>
+							</div> <!-- Close #toggle3 -->
+							
+							<div class="gallery aanUit" id="toggle2"> <!-- class voor nog wat CSS -->
+								<h2>Herenkleding</h2>
+								<p>
+									Herenkleding maken is een vak apart. Vooral het colbert vraagt extra aandacht omdat het -in tegenstelling tot het damescolbert- veel vaker gedragen wordt. Het moet dan ook voldoen aan zwaardere eisen. Om een colbert zijn goede pasvorm te laten
+									behouden is een speciale toepassing van binnenwerk noodzakelijk. Het bewerken van een colbert vraagt veel tijd. Om aan herenwerk te beginnen is ruime ervaring nodig in het maken van dameskleding.
+								</p>
+								
+								<div class="fotocontainer">
+									<div class="foto">
+										<a href="galerie/herenkostuum/01.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Pantalon op ruit genaaid" title="Pantalon op ruit genaaid" src="galerie/herenkostuum/tmb/01.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/02.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Gevoerd vestzak" title="Gevoerd vestzak" src="galerie/herenkostuum/tmb/02.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/03.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Gevoerd vest buitenkant" title="Gevoerd vest buitenkant" src="galerie/herenkostuum/tmb/03.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/04.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Met de hand geborduurde kleermakers knoopsgaten" title="Met de hand geborduurde kleermakers knoopsgaten" src="galerie/herenkostuum/tmb/04.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/05.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Gevoerd vest binnen/buitenkant" title="Gevoerd vest binnen/buitenkant" src="galerie/herenkostuum/tmb/05.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/06.jpg" rel="prettyPhoto[Herenkostuum]"><img alt="Stoffen rughalsbeleg" title="Stoffen rughalsbeleg" src="galerie/herenkostuum/tmb/06.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/herenkostuum/07.jpg" rel="prettyPhoto[Herenkostuum]"><img alt='Colbert met “los binnenwerk” in de pas' title='Colbert met “los binnenwerk” in de pas' src="galerie/herenkostuum/tmb/07.jpg" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+								
+								<p>In de voorbeelden ziet u:</p>
+								<ul class="koppie" style="margin-left:12px;">
+									<li>Een pantalon op ruit genaaid met gepaspoileerde achterzakken en verlegde naadzakken in het voorpand
+									<li>Een gevoerd vest met daarin met de hand geborduurde kleermakers knoopsgaten en een stoffen rughalsbeleg
+									<li>Een colbert met “los binnenwerk” in de pas. De rijgdraden houden het binnenwerk op zijn plaats totdat het colbert klaar is.
+								</ul>
+
+							</div>	<!-- Close #toggle2 -->					
+							
+							<div class="gallery aanUit" id="toggle1"> <!-- class voor nog wat CSS -->
+								<h2>Dameskleding</h2>
+								<p>Om uit te proberen of een zelf ontwikkeld patroon tot het gewenste resultaat leidt is een paspopje op halve schaal onontbeerlijk. Papier is geduldig, alles is erop te
+									tekenen, of uitvoering mogelijk is moet vaak blijken. Ook hiervoor wordt slechts een bescheiden hoeveelheid stof gebruikt. Er kan zelfs een inferieure kwaliteit stof worden
+									gebruikt, zolang de eigenschappen ervan vergelijkbaar zijn aan die van de te gebruiken stof op ware grootte.
+								</p>	
+								<p>Het damescolbert is gemaakt uit zuiver wollen mohair boucl&eacute;, heeft een staand boordje tot naast midden voor en een ondiepe v-hals.
+									<br />De aubergine combinatie is gemaakt uit een zijden stretch cr&ecirc;pe, een zeer lastige stof om te naaien, maar heel prettig in het dragen.
+								</p>
+								<div class="fotocontainer">
+									<div class="foto">
+										<a href="galerie/dameskleding/00.jpg" rel="prettyPhoto[dameskleding]"><img alt="Paspopje op halve schaal" title="Paspopje op halve schaal" src="galerie/dameskleding/tmb/00.png" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/01.jpg" rel="prettyPhoto[dameskleding]"><img alt="Paspopje op halve schaal" title="Paspopje op halve schaal" src="galerie/dameskleding/tmb/01.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/02.jpg" rel="prettyPhoto[dameskleding]"><img alt="Paspopje op halve schaal" title="Paspopje op halve schaal" src="galerie/dameskleding/tmb/02.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/03.jpg" rel="prettyPhoto[dameskleding]"><img alt="Paspopje op halve schaal" title="Paspopje op halve schaal" src="galerie/dameskleding/tmb/03.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/04.jpg" rel="prettyPhoto[dameskleding]"><img alt="Damescolbert gemaakt uit zuiver wollen mohair boucl&eacute; voorkant" title="Damescolbert gemaakt uit zuiver wollen mohair boucl&eacute; voorkant" src="galerie/dameskleding/tmb/04.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/05.jpg" rel="prettyPhoto[dameskleding]"><img alt="Damescolbert gemaakt uit zuiver wollen mohair boucl&eacute; achterkant" title="Damescolbert gemaakt uit zuiver wollen mohair boucl&eacute; achterkant" src="galerie/dameskleding/tmb/05.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/06.jpg" rel="prettyPhoto[dameskleding]"><img alt="Aubergine combinatie, gemaakt uit een zijden stretch cr&ecirc;pe" title="Aubergine combinatie, gemaakt uit een zijden stretch cr&ecirc;pe" src="galerie/dameskleding/tmb/06.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/07.jpg" rel="prettyPhoto[dameskleding]"><img alt="Kinderjurkje, voorkant" title="Kinderjurkje, voorkant" src="galerie/dameskleding/tmb/07.jpg" /></a>
+									</div>
+									<div class="foto">
+										<a href="galerie/dameskleding/08.jpg" rel="prettyPhoto[dameskleding]"><img alt="Kinderjurkje, achterkant" title="Kinderjurkje, achterkant" src="galerie/dameskleding/tmb/08.jpg" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+							</div> <!-- Close #toggle1 -->
+							
+							<div class="gallery aanUit" id="toggle0"> <!-- toggle0 is alleen voor als er niks getoond wordt (als verberg alles wordt gekozen) -->
+								<h2>(Kies uw onderwerp)</h2>
+								<!--p style="text-align:center">(Voor foto's met toelichting)</p-->
+								<div class="fotocontainer">
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/dameskleding/00.jpg" rel="prettyPhoto[Paspop]"><img alt="(Paspopje halve schaal)" title="(Paspopje halve schaal)" src="galerie/dameskleding/tmb/00.png" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+							</div> <!-- Close #toggle0 -->
+	
+						</article>
+					</div> <!--close sectioncontent -->
+					
+				</div> <!--close section-->
+
+				
+			<!-- #EndEditable -->
+				
+			</div> <!--close content-->
+				
+		</div> <!--close contentarea-->
+		
+	</div> <!--close wrapper-->
+	
+	<div id="footer" title="Modevakschool “Het Beijersche” - Uw school voor modevakonderwijs">
+			<p>&copy; Modevakschool “Het Beijersche” - Uw school voor modevakonderwijs</p>
+	</div> <!--close footer-->
+
+	<script src="js/opmaak.js" ></script><!--  -->
+	
+	<!-- #BeginEditable "bottomscripts" -->
+	
+	
+	<!-- #EndEditable -->
+	
+	<script>// After window is done loading, execute 'RikFunction()' (sets the size of div's and such, based on window size)
+		// window.onload doesn't work very well in IE8. The 'new' construction is to try to help with that:
+		window.onload = new function() {RikFunction()};
+		// var windowOnload=window.onload||function(){};window.onload=function(){windowOnload();};
+		// window.onload = RikFunction(); // Or as self executing function: (RikFunction())();
+	</script>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

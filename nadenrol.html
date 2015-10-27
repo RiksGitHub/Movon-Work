@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<!-- #BeginTemplate "Sjabloon%20flex.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- Add a little picture on the tab: -->
+<link rel="icon" href="images/Movico.png" type="image/x-icon" />
+
+<!-- #BeginEditable "metadata" -->
+
+<meta name="description" content="Movon, school voor modevakonderwijs, regio Gouda">
+<meta name="keywords" content="naailes, naailessen, cursussen, workshops, gouda, movon, annelies,
+annelies van den broek, broek, herenkleding, dameskeding, damesmode, herenmode, nadenrol, stofknopen">
+
+<!-- #EndEditable -->
+
+<!-- The following is required so phones determine text size and stuff based on ACTUAL window size, and not some virtual larger size -->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<!--meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" /-->
+
+<!--Zodat oude IE's er nog wat van snappen:-->
+<!--[if lt IE 9]> <!-- if less than internet explorer 9 -->
+	<script src="js/html5shiv.js" type="text/javascript"></script> <!-- Zodat oude (IE) browsers wat van de nieuwe HTML5 taal kunnen gebruiken -->
+<![endif]-->
+
+<!--[if lt IE 7]> <!-- Stylesheet to fix (stuff like) png transparency for IE<7-->
+	<link rel="stylesheet" type="text/css" href="iepngfix.css">
+<![endif]-->
+
+<!-- #BeginEditable "scripts" -->
+
+<!--De code om jquery aan de pagina te koppelen:-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!-- De verwijzing naar de Prettyphoto (javascript) plugin (en bijbehorend stylesheet): -->
+<script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<link href="js/prettyPhoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+
+<script>
+$(document).ready(function(){
+//theme: 'pp_default'/ light_rounded / dark_rounded / light_square / dark_square / facebook
+$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false,counter_separator_label:" uit ",theme:'dark_rounded'}) 
+});
+</script>
+
+<!-- Include the Google Maps API library - required for embedding maps >
+<script src="http://maps.googleapis.com/maps/api/js"></script-->
+
+<!-- #EndEditable -->
+
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/navbar.css" rel="stylesheet" type="text/css">
+<link href="css/windowsize.css" rel="stylesheet" type="text/css">
+
+<!-- #BeginEditable "doctitle" -->
+
+
+	<title>Movon Nadenrol</title>
+	
+
+<!-- #EndEditable -->
+	
+
+</head>
+
+<body onresize="RikFunction()"><!-- Adjusting stuff with JS-->
+
+	<div id="wrapper">
+	
+		<div id="header">
+			<div id="logobackground">
+				<div id="logo">
+					<!--a href="index.html"><img src="images/movon_logo.png" alt="Home" title="Movon Home" /></a-->
+				</div>
+			</div> <!--close logobackground-->
+			
+			<div id="title">
+				<div id="headerpic" style="width:100%; margin:0 auto;"> <!-- ID voor JS -->
+					<a href="index.html">
+						<img  src="images/header.png" alt="" title="Movon Home" style="width:100%" />
+					</a>
+				</div>
+			</div> <!--close title-->
+		</div> <!--close header-->
+		
+		<div id="navbar">
+			
+			<ul class="menu">
+		      <li title="Movon Home"><a href="index.html"><br />HOME</a></li>
+			</ul>
+			
+			<ul class="menu">  
+			  <li class="sub"><a href="javascript:void(0)"><br />CURSUSSEN</a>
+		         <ul class="submenu">
+		            <li title="Algemene cursusinformatie"><a href="cursusinformatie.html">Algemene cursusinformatie</a></li>
+		            <li title="Cursusaanbod"><a href="cursusaanbod.html">Aangeboden cursussen</a></li>
+		            <li title="Knipmode Cursussen"><a href="knipmodenaaicursussen.html">Cursussen van Knipmode</a></li>
+		         </ul>
+		      </li>
+		    </ul>
+			
+			<ul class="menu">  
+		      <li class="sub"><a href="javascript:void(0)"><br />WORKSHOPS</a>
+		         <ul class="submenu">
+		            <li title="Algemene workshopinformatie"><a href="workshops.html#workshopalgemeen">Algemene informatie</a></li>
+		            <li title="Workshop textielwarenkennis"><a href="workshops.html#textielwarenkennis">Textielwaren kennis</a></li>
+		            <li title="Workshop paspop maken op eigen maat"><a href="workshops.html#paspoppen">Paspop op eigen maat</a></li>
+		            <li title="Workshop paspopje maken op halve schaal"><a href="workshops.html#paspopje">Paspopje halve schaal</a></li>
+		            <li title="Workshop herenpantalon of herencolbert"><a href="workshops.html#herenpantalon">Herenpantalon of herencolbert</a></li>
+		         </ul>
+		      </li>
+		    </ul>
+			
+			<ul class="menu">  
+		      <li class="sub"><a href="javascript:void(0)">PRODUCTEN<br />/SERVICE</a>
+		         <ul class="submenu">
+		            <li title="De nadenrol"><a href="nadenrol.html">Nadenrol</a></li>
+		            <li title="Stofknopenservice"><a href="knopenservice.html">Stofknopen</a></li>
+		            <li title="Paspopje"><a href="paspopje.html">Paspopje</a></li>
+		         </ul>
+		      </li>
+			</ul>
+			
+			<ul class="menu">	
+		      <li title="Foto's"><a href="fotos.html"><br />FOTOGALERIE</a></li>
+		    </ul>
+			
+			<ul class="menu">
+			  <li title="Movon contactinformatie"><a href="contact.html"><br />CONTACT</a></li>
+		    </ul>
+			
+			<ul class="menu">
+			  <li title="Algemene voorwaarden"><a href="algemenevoorwaarden.html">ALGEMENE<br />VOORWAARDEN</a></li>
+		    </ul>
+			
+			<ul class="menu">  <li class="sub"><a href="links.html"><br />VAKGENOTEN</a>
+		         <ul class="submenu">
+		            <li title="Landelijk Platform Modevakonderwijs"><a href="http://www.landelijkplatformmodevakonderwijs.nl/SiteLPM/Home.html" target="_blank">LPM</a></li>
+		            <li title="Branchevereniging Mode Ambachten"><a href="https://www.modeambachten.nl" target="_blank">BMA</a></li>
+		            <li title="Beauty V.o.F."><a href="http://www.beautyvof.com" target="_blank">Beauty V.o.F.</a></li>
+		            <li title="Knipmode"><a href="http://www.knipmode.nl" target="_blank">Knipmode</a></li>
+		            <li title="Atelier 88"><a href="http://www.atelier88.nl" target="_blank">Atelier 88</a></li>
+		            <li title="Modestudio Nelleke Vos"><a href="http://www.modestudionellekevos.nl" target="_blank">Modestudio<br />Nelleke Vos</a></li>
+		            <li title="Modevakschool Stitch &amp; Create"><a href="http://www.stitchandcreate.nl" target="_blank">Modevakschool Stitch &amp; Create</a></li>
+		            <li title="De allereerste Movon site"><a href="http://www.movon.info/movon_oud/Movon/Home.html" target="_blank">Movon oud I</a></li>
+		            <li title="De vorige Movon site"><a href="http://www.movon.info/movon_oud2/index.html" target="_blank">Movon oud II</a></li>
+		         </ul>
+		      </li>
+			</ul>
+		<!--/div> <!-- close navbarcenterdiv -->
+		</div> <!--close navbar-->
+		
+		<div id="contact">
+			<div class="inner">
+				<p><strong> Algemene leiding/docente: </strong><span style="display:inline-block;"><em> Annelies van den Broek </em></span></p>
+				<br /><Address> Beijerscheweg 58, </address>&nbsp;<address> 2821NH, Stolwijk </address>
+				<p><span style="display:inline-block;"> &#9742; <em> 0182-521884 </em></span></p>
+			</div>
+		</div> <!--close contact-->
+		
+		<div id="contentarea">
+			<div id="leftbar">
+			<!--p>#leftbar</p-->
+			</div> <!--close leftbar-->
+			
+			<div id="content">
+			
+				<!-- #BeginEditable "content" -->
+			
+				<div class="section" style="border:0px; background:none;">
+
+					<div class="sectionleftbar">
+						<div class="leftbarcontent">
+							<p id="windowsize">&nbsp;</p>
+							<p style="text-align:center; margin:0; padding:0;">
+							<br />
+							<img src="galerie/nadenrol/04.jpg" alt="Nadenrol" style="width:100%; max-width:300px;" />
+							</p>
+							<p style="font-size:small; margin:0 0 10px 0; padding:0;"><br />
+							De nadenrol is te bestellen via het <a href="contact.html#contactformulier">contactformulier</a> of rechtstreeks bij het Movon (zie <a href="contact.html">contactgegevens</a>).
+							<p style="font-size:small; margin:0 0 10px 0; padding:0;">Bijdrage verzendkosten pakketpost tot 10kg: € 7,00
+							<br />Bestellingen boven € 70,- zijn vrij van verzendkosten.</p>
+							<p style="font-size:small; margin:0 0 10px 0; padding:0;">Levering geschiedt bij vooruitbetaling op (ING) IBAN-nummer NL55 INGB 0006 493277 t.n.v 'Het Movon' te Stolwijk.
+							</p>
+						</div> <!--close leftbarcontent-->
+					</div> <!--close sectionleftbar-->
+					
+					<div class="sectioncontent">
+						<article>	
+							<table style="width: 100%; margin-bottom:0;">
+								<tr>
+									<td style="width:23%;text-align:left; color:rgb(224, 77, 16); font-size:28px; font-style:italic">Nieuw!!!</td>
+									<td style="width:30%;"><h2 style="text-align:right"> Nadenrol</h2></td>
+									<td style="width:47%;"><h2 style="text-align:right">Prijs: €24,95</h2></td>
+								</tr>
+							</table>
+							
+							<!--div class="gallery">
+								<!-- Het filmpje op Youtube: -->
+								<div style="text-align:center;">
+									<div style="position:relative; display:block; overflow:hidden; width:90%;max-width:500px; margin:15pt auto 20pt auto; background-color:white; padding:5px; ">
+										<img alt="" src="images/500x281 Blank.png" style="width:100%" /> <!-- Dummy plaatje voor de juist hoogte-breedte verhouding -->
+										<!-- Anything 'flash' (like youtube stuff) is coded to be on top (highestz-index), which overlaps the dropdown menu and stuff
+										this is fixed by putting "?wmode=transparent" at the end of the link (I don't know flash programming, just go with it) -->
+										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/wzMoc-Qv2LI?wmode=transparent" frameborder="0" allowfullscreen  
+										style="position:absolute;top:0%; left:0%;"></iframe><!-- Zet het filmpje over het (lege) plaatje heen -->
+									</div>
+								</div>
+								<p>De nadenrol is een stuk gereedschap voor het perfect strijken en persen van naden met de volgende voordelen:</p>
+								<ul class="spacelist koppie" style="margin-left:5%; margin-right:5%;">
+									<li><strong>Voorkomt doorpersen</strong> door de ronde vorm
+									</li>
+									<li><strong>Persen met natte doek of stoom</strong> geeft snel een droge naad
+									</li>
+									<li><strong>Opspannen van de naad</strong> met slechts drie vingers op de rol
+									</li>
+									<li><strong>Rondlopende naden</strong> laten zich makkelijk persen zonder valse vouwen 
+									</li>
+									<li><strong>Geschikt voor alle stoffen</strong>, dik of dun en van tere zijde tot stevige katoen en dikke mantelstoffen
+									</li>
+									<li><strong>Schuift zeer snel door</strong> bij het persen van mouw- en pantalonnaden
+									</li>
+									<li><strong>Praktische lengte</strong> circa 50 cm. lang
+									</li>
+									<li><strong>Licht en gemakkelijk</strong> te hanteren
+									</li>
+									<li><strong>Stabiel</strong> door de platte onderkant
+									</li>
+									<li><strong>Bekleding</strong> van katoenen, aluminium coated overtrek
+									</li>
+									<li><strong>Blijft schoon</strong> op de ronde bovenkant zal er nooit bij vergissing een strijkijzer blijven staan
+									</li>
+									<li><strong>Zeer duurzaam</strong> door toepassing van kwaliteitsmaterialen in de rol, dus:
+									</li>
+								</ul>
+								<div class="fotocontainer">
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/nadenrol/01.jpg" rel="prettyPhoto[Nadenrol]"><img alt="De nadenrol is er in verschillende kleuren" title="Klik voor nadenrolfoto's" src="galerie/nadenrol/tmb/01.png" /></a>
+									</div>
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/nadenrol/02.jpg" rel="prettyPhoto[Nadenrol]"><img alt="De nadenrol is er in verschillende kleuren" title="Klik voor nadenrolfoto's" src="galerie/nadenrol/tmb/02.png" /></a>
+									</div>
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/nadenrol/03.jpg" rel="prettyPhoto[Nadenrol]"><img alt="De nadenrol is er in verschillende kleuren" title="Klik voor nadenrolfoto's" src="galerie/nadenrol/tmb/03.png" /></a>
+									</div>
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/nadenrol/04.jpg" rel="prettyPhoto[Nadenrol]"><img alt="De nadenrol" title="Klik voor nadenrolfoto's" src="galerie/nadenrol/tmb/04.png" /></a>
+									</div>
+									<div class="foto" style="position:relative;float:none;margin-left:auto; margin-right:auto;">
+										<a href="galerie/nadenrol/05.jpg" rel="prettyPhoto[Nadenrol]"><img alt="De nadenrol" title="Klik voor nadenrolfoto's" src="galerie/nadenrol/tmb/05.png" /></a>
+									</div>
+								</div> <!-- Close .fotocontainer -->
+								<p style="width:90%; text-align:right; color:rgb(224, 77, 16); font-size:28px; font-style:italic; margin-top:.5em;">een eenmalige aanschaf!</p>
+							<!--/div> <!-- Close .gallery -->
+
+							
+							<!--div style="text-align:center;">
+								<div style="position:relative; display:inline-block; overflow:hidden; padding:5px; text-align:center; background-color:white;">
+									<img src="galerie/nadenrol/02.jpg" alt="De nadenrol is er in diverse kleuren" title="De nadenrol is er in diverse kleuren" style="width:100%; max-width:390px;"/>
+								</div>
+								<div style="position:relative; display:inline-block; overflow:hidden; padding:5px; text-align:center; background-color:white;">
+									<img src="galerie/nadenrol/05.jpg" alt="De nadenrol" title="De nadenrol" style="width:100%; max-width:188px;"/>
+								</div>
+							</div>
+							<br /-->
+						</article> 
+					</div> <!--close sectioncontent -->
+					
+				</div> <!--close section-->
+				
+				
+			<!-- #EndEditable -->
+				
+			</div> <!--close content-->
+				
+		</div> <!--close contentarea-->
+		
+	</div> <!--close wrapper-->
+	
+	<div id="footer" title="Modevakschool “Het Beijersche” - Uw school voor modevakonderwijs">
+			<p>&copy; Modevakschool “Het Beijersche” - Uw school voor modevakonderwijs</p>
+	</div> <!--close footer-->
+
+	<script src="js/opmaak.js" ></script><!--  -->
+	
+	<!-- #BeginEditable "bottomscripts" -->
+	
+	
+	<!-- #EndEditable -->
+	
+	<script>// After window is done loading, execute 'RikFunction()' (sets the size of div's and such, based on window size)
+		// window.onload doesn't work very well in IE8. The 'new' construction is to try to help with that:
+		window.onload = new function() {RikFunction()};
+		// var windowOnload=window.onload||function(){};window.onload=function(){windowOnload();};
+		// window.onload = RikFunction(); // Or as self executing function: (RikFunction())();
+	</script>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
