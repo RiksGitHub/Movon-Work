@@ -47,7 +47,7 @@
 	#leftbar				{width:22%; }
 	#content				{width:78%; }
 	.section				{width: 128%; left: -28%; /* In case calc() doesn't work */
-							width: calc((1+22/78)*100%); left: calc((-22/78)*100%);}
+							width: calc((1 + 22/78)*100%); left: calc((-22/78)*100%);} /* Chrome NEEDS spaces or it will do weird stuff */
 	.sectionleftbar			{width:22%; }
 	.sectioncontent			{width:78%; }
 	#contact				{width:22%; height:1em;}
@@ -67,7 +67,7 @@
 	#leftbar				{width:22%; }
 	#content				{width:78%; }
 	.section				{width: 128%; left: -28%; /* In case calc() doesn't work */
-							width: calc((1+22/78)*100%); left: calc((-22/78)*100%);}
+							width: calc((1 + 22/78)*100%); left: calc((-22/78)*100%);} /* Chrome NEEDS spaces or it will do weird stuff */
 	.sectionleftbar			{width:22%; }
 	.sectioncontent			{width:78%; }
 	#contact				{width:22%; height:1em;}

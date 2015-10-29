@@ -164,18 +164,21 @@ body > #wrapper 	{height: auto; min-height: 100%; } /* This line added because o
 
 /* Main menu settings (#navbar)*/
 
-#contentarea		{float:left; position:relative; overflow:visible; /* Div contains #leftbar and #content, so they can be given a background color. Overflow:visible to show #content shadow and extend the submenu past below the #content */
+#contentarea		{
+					float:left; position:relative; overflow:visible; /* Div contains #leftbar and #content, so they can be given a background color. Overflow:visible to show #content shadow and extend the submenu past below the #content */
 					min-height:100%; z-index:2;
 					width:100%; /* Controlled by JS /**/
 					padding-bottom:0px; /*Padding-bottom for height of footer*/
 					} 
 
-#leftbar			{float:left; position:relative; overflow:visible; /*visible, so the submenu's can be seen when expanded*/
+#leftbar			{
+					float:left; position:relative; overflow:visible; /*visible, so the submenu's can be seen when expanded*/
 					width:22%; /* Controlled by JS /**/
 					height:100%; min-height:.2em; /*min-height is so it doesn't collapse when it's empty*/
 					} 
 					
-#content 			{float:left; position:relative; bottom:0;
+#content 			{
+					float:left; position:relative; bottom:0;
 					padding-bottom:30px; /*padding-top:20px; /* Padding-bottom is for height of footer */
 					width:78%; /* Controlled by JS /**/
 					height:100%; min-height:100%; 
@@ -255,16 +258,17 @@ body > #wrapper 	{height: auto; min-height: 100%; } /* This line added because o
 
 .form .submit button{width:6em; height:2.0em; margin-top:1em; outline:0;}
 
-.section		 	{position:relative; float:left; clear:both; bottom:0;
+.section		 	{
+					position:relative; float:left; clear:both; bottom:0;
 					width:1200px; left:-264px; /* Both controlled by JS /**/
 					border-top:1px dashed #88CCFF;/*border-bottom:1px solid #FF5050; /* Turn on to see sections */
 					padding-top:0.5em;padding-bottom:0.5em;/**/
 					margin-bottom:2em;
-					background-color:rgba(0,0,0,0.02);
-					/*background-color:rgba(196,255,196,0.5);/**/
+					background-color:rgba(0,0,0,0.02);/**/
 					}
 				
-.sectionleftbar		{position:relative; float:left; /* Same width as leftbar */
+.sectionleftbar		{/**/
+					position:relative; float:left; /* Same width as leftbar */
 					width:22%; /* Controlled by JS /**/
 					/*background-color:rgba(221,118,49,0.5);/**/
 					} 
@@ -338,7 +342,8 @@ body > #wrapper 	{height: auto; min-height: 100%; } /* This line added because o
 					margin-top:8em; /* Controlled by JS /**/
 					}
 
-.sectioncontent		{position:relative; display:inline-block;float:left; /**/
+.sectioncontent		{/**/
+					position:relative; display:inline-block;float:left; /**/
 					width:78%; /* Controlled by JS /**/
 					/*background-color:rgba(238,189,157,0.5);/**/
 					} 
